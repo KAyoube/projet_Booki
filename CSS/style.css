@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
-    font-family: Raleway;
+    font-family: 'Raleway';
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
@@ -17,7 +21,6 @@ nav {
     display: flex;
     width: 96%;
     align-self: center;
-    justify-content: space-between;
 }
 
 nav img {
@@ -39,13 +42,15 @@ nav a:hover {
 
 .select {
     display: flex;
-    justify-content: end;
-    width: 85%;
+    justify-content: space-between;
+    width: 100%;
 }
 .choix {
     display: flex;
-    justify-content: space-between;
-    width: 20%;
+}
+
+.choix :first-child {
+    margin-right: 15px;
 }
 article {
     align-self:center;
@@ -82,7 +87,6 @@ form span {
 form span:hover {
     filter: drop-shadow(0 0 1px);
     cursor: pointer;
-
 }
 
 form input {
@@ -92,7 +96,6 @@ form input {
     font-weight: bold;
     border: 2px solid #F2F2F2;
 }
-
 
 form p {
     background-color: #0065FC;
@@ -104,6 +107,11 @@ form p {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     cursor: pointer;
+    position: relative;
+}
+
+form p i{
+    visibility: hidden;
 }
 form a {
     text-decoration: none;
@@ -113,35 +121,32 @@ form a {
 
 .filtre {
     display: flex;
-    border: 1px solid red;
     align-items: center;
     width: 100%;
 }
 .filtre h3 {
     margin: 0;
-    width: 10%;
 }
 .cat {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 55%;
+    width: 70%;
 }
 
 .eco {
     display: flex;
     align-items: center;
     border-radius: 50px;
-    border: 1px solid #F2F2F2;
-    padding-right: 9px;
+    border: 3px solid #F2F2F2;
     height: 30px;
+    width: max-content;
 }
 
 .eco:hover {
     background-color: #F2F2F2;
     cursor: pointer;
     filter: drop-shadow(0 0 1px);
-    
 }
 
 .eco p {
@@ -159,7 +164,6 @@ form a {
 }
 
 .inf {
-    border: 1px solid red;
     display: flex;
     align-items: center;
     width: 50%;
@@ -181,14 +185,112 @@ form a {
     margin-left: 10px;
 }
 
-@media (max-width:992px) {
 
+@media (max-width:992px) {
     nav a {
-        padding-top: 0;
-        padding-bottom: 10px;
+        padding-top: 10px;
     }
     nav a:hover {
         border-bottom: 2px solid #0065FC;
         border-top: 2px solid transparent;
+    }
+
+    form p {
+        width: 10%;
+    }
+
+    form p i {
+        visibility: visible;
+    }
+
+    form p a {
+        display: none;
+    }
+
+    #loupe {
+        color:#DEEBFF;
+    }
+
 }
+
+@media (max-width:768px) {
+    .select {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .choix {
+        width: 90%;
+        justify-content: space-around;
+    }
+
+    nav a {
+        padding-top: 10px;
+    }
+    nav a:hover {
+        border-bottom: 2px solid #0065FC;
+        border-top: 2px solid transparent;
+    }
+
+    nav img {
+        width: 25%;
+        cursor: pointer;
+    }
+
+
+    .filtre {
+        flex-direction: column;
+        align-items: unset;
+        width: 85%;
+    }
+
+    .cat {
+        align-items: unset;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 90%;
+        align-self: center;
+    }
+
+    .eco {
+        height: 40px;
+    }
+    .eco:hover {
+        background-color: #F2F2F2;
+        cursor: pointer;
+        filter: drop-shadow(0 0 1px);
+    }
+
+    form {
+        width: 100%;
+    }
+
+    form p {
+        width: 15%;
+        border-radius: 10px;
+    }
+    form input {
+        width: 70%;
+    }
+
+    form p i {
+        visibility: visible;
+    }
+
+    form p a {
+        display: none;
+    }
+
+    form span {
+        width: 15%;
+    }
+
+    #loupe {
+        color:#DEEBFF;
+    }
+
+    .inf {
+        width: 100%;
+    }
+   
 }
