@@ -185,7 +185,118 @@ form a {
     margin-left: 10px;
 }
 
-
+.article {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.titre {
+    width: 95%;
+    align-self: center;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    width: 28%;
+    border-radius: 25px;
+}
+.chart {
+    display: flex;
+    justify-content: space-between;
+    width: 87%;
+    align-self: center;
+    align-items: center;
+}
+.chart i {
+    color :black;
+}
+.pop {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 90%;
+}
+.pop1 {
+    display: flex;
+    width: 88%;
+    border-radius: 25px;
+    background-color: white;
+    border: 5px solid white;
+    align-self: center;
+    height: 25%;
+}
+.image {
+    width: 32%;
+    object-fit: cover;
+    border-radius: 18px 0 0 18px;
+    margin-right:10px;
+    height: 100%;
+}
+.txtimg {
+    display: flex;
+    flex-direction: column;
+    height: 95%;
+    justify-content: space-between;
+}
+.texte{
+    display: flex;
+    flex-direction: column;
+}
+h4{
+    margin-block-end: 0.5em;
+    margin-block-start: 0.5em;
+}
+main p{
+    margin: 0;
+}
+.hebergements {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F2F2;
+    border-radius: 25px;
+}
+.hebergements p {
+    width: 95%;
+    align-self: center;
+}
+section h4 {
+    width: 95%;
+    align-self: center;
+}
+.heb1 {
+    display: flex;
+    flex-wrap:wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.heb2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 31%;
+    border-radius: 25px;
+    background-color: white;
+    border: 7px solid white;
+}
+.image2 {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+    height: 100px;
+}
+.colorbleu {
+    color:#0065FC;
+}
+.colorgris {
+    color:#E1E0E0;
+}
+.heb2 .etoile {
+    margin-left: 5px;
+}
 @media (max-width:992px) {
     nav a {
         padding-top: 10px;
@@ -209,6 +320,25 @@ form a {
 
     #loupe {
         color:#DEEBFF;
+    }
+    .heb2 {
+        width: 45%;
+    }
+    .image {
+        height: 100%;
+        width: 40%;
+    }
+    .pop { 
+        height: 85%;
+    }
+    .titre {
+        width: 87%;
+    }
+    aside {
+        width: 40%;
+    }
+    .hebergements {
+        width: 50%;
     }
 
 }
@@ -291,5 +421,48 @@ form a {
     
     .inf {
         width: 100%;
+    }
+    .article {
+        flex-direction: column;
+    }
+    aside {
+        width: 90%;
+        margin-bottom: 10px;
+        align-self: center;
+        height: 850px;
+    }
+    .hebergements {
+        width: 90%;
+        background-color: transparent;
+        filter:drop-shadow(16px 16px 20px #F2F2F2);
+        align-self: center;
+    }
+    .pop1 h4 {
+        width: 95%;
+        align-self: center;
+    }
+    .pop1 p {
+        width: 95%;
+        align-self: center;
+    }
+    .heb1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .heb2 {
+        width: 88%;
+    }
+    .image {
+        height: 100%;
+        width: 40%;
+    }
+    .image2 {
+        height: 200px;
+    }
+    .titre {
+        width: 87%;
+    }
+    .heb2 .etoile {
+        margin-left: 13px;
     }
 }
