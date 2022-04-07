@@ -227,6 +227,7 @@ aside {
     border: 5px solid white;
     align-self: center;
     height: 25%;
+    cursor: pointer;
 }
 .image {
     width: 32%;
@@ -281,6 +282,7 @@ section h4 {
     border-radius: 25px;
     background-color: white;
     border: 7px solid white;
+    cursor: pointer;
 }
 .image2 {
     width: 100%;
